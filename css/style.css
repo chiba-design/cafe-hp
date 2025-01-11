@@ -1,0 +1,659 @@
+@charset "utf-8";
+
+body {
+    background: #F8F4EC;
+    font-family: sans-serif;
+    color: #000;
+}
+
+/* reset css */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+.fadein {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s;
+}
+
+/* 共通 */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 4%;
+    text-align: center;
+}
+
+.section-title,
+.section-title span {
+    font-size: 36px;
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-color: #D96C47;
+    text-decoration-thickness: 0.3em;
+    /* 太さの指定 */
+    text-underline-offset: -0.2em;
+    /* テキストとアンダーラインの距離 */
+}
+
+.section-title {
+    margin-bottom: 40px;
+}
+
+.section-title span {
+    display: block;
+}
+
+.arrow {
+    position: relative;
+}
+
+.arrow img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 30px;
+}
+
+/* header
+---------------------------------------------------------------------- */
+.header {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    background: #F8DCB0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 4%;
+    height: 60px;
+}
+
+.header-logo {
+    line-height: 1;
+}
+
+.header-logo img {
+    width: 120px;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.nav-list li a {
+    font-size: 20px;
+    transition: 0.3s ease;
+}
+
+.nav-list li a:hover {
+    opacity: .7;
+}
+
+/* 経験者 */
+
+
+/* main
+------------------------------------------------------------------ */
+main {
+    padding-top: 60px;
+}
+
+/* mainvisual */
+.mainvisual {
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.mainvisual img {
+    height: 70vh;
+    object-fit: cover;
+    vertical-align: bottom;
+}
+
+.mainvisual-textbox {
+    position: absolute;
+    top: 40px;
+    padding: 0 4%;
+}
+
+.main-catchcopy {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.sub-catchcopy {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* intoroduction */
+.introduction {
+    padding-bottom: 45px;
+}
+
+.introduction-textbox {
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.introduction-contents img {
+    width: 570px;
+}
+
+/* supprt */
+.supprt {
+    background: #EFE3D6;
+    padding-top: 35px;
+    padding-bottom: 45px;
+}
+
+.supprt-catchcopy {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.supprt-content {
+    margin-bottom: 20px;
+    line-height: 1;
+}
+
+.supprt-content:last-child {
+    margin-bottom: 0;
+}
+
+.supprt-content-title {
+    font-size: 30px;
+}
+
+.supprt-content span {
+    display: block;
+}
+
+.supprt-content-text {
+    line-height: 1.4;
+    font-size: 20px;
+}
+
+.supprt-content-title,
+.supprt-content-text {
+    background: #fff;
+    box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.1);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* voice */
+.voice {
+    padding-top: 35px;
+}
+
+.voice-contents {
+    margin-bottom: 40px;
+}
+
+.voice-contents:last-child {
+    margin-bottom: 0;
+}
+
+.voice-contents-textbox {
+    margin-bottom: 20px;
+}
+
+.voice-contents-name {
+    margin-bottom: 10px;
+}
+
+.voice-contents p {
+    text-align: left;
+    font-size: 20px;
+
+}
+
+.voice-contents p span {
+    margin-left: 20px;
+}
+
+/* recruitment */
+.recruitment {
+    margin-top: 80px;
+    padding-bottom: 45px;
+}
+
+.recruitment-contents {
+    background: #fff;
+    padding: 40px 20px;
+    border-radius: 50px;
+    text-align: left;
+}
+
+.recruitment-content-box {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.recruitment-content-box:last-child {
+    margin-bottom: 0;
+}
+
+.recruitment-content-box .recruitment-text {
+    margin-left: 68px;
+}
+
+.recruitment-content-box .recruitment-content-smolltext {
+    font-size: 16px;
+}
+
+/* apply */
+.apply {
+    background: #EFE3D6;
+    padding-top: 35px;
+    padding-bottom: 45px;
+}
+
+.apply p {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.apply a {
+    display: inline-block;
+    width: 100%;
+    background: #B04A47;
+    border-radius: 50px;
+    padding: 20px 0;
+    border: 2px solid #B04A47;
+    font-size: 40px;
+    color: #fff;
+    font-weight: bold;
+    transition: .3s ease;
+}
+
+.apply a:hover {
+    background: #fff;
+    color: #B04A47;
+}
+
+/* store */
+.store {
+    margin-top: 80px;
+}
+
+.store-content {
+    background: #fff;
+    padding: 40px 20px;
+    border-radius: 50px;
+    text-align: left;
+}
+
+.store-content-box {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.store-content-box:last-child {
+    margin-bottom: 0;
+}
+
+/* footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #F8DCB0;
+    margin-top: 60px;
+    padding: 30px 4%;
+}
+
+.footer-logo img {
+    width: 120px;
+}
+
+/* 経験者 */
+.work {
+    padding-top: 35px;
+    padding-bottom: 45px;
+}
+
+.work-catchcopy {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.work-contents img {
+    line-height: 1;
+}
+
+.work-contents-itembox {
+    background: #fff;
+    margin-bottom: 10px;
+}
+
+.work-contents-textbox {
+    text-align: left;
+    padding: 20px;
+}
+
+.work .work-textbox-title {
+    font-size: 32px;
+    line-height: 1;
+}
+
+.work p {
+    font-size: 20px;
+}
+
+.voice .voice-smolltext {
+    font-size: 16px;
+    margin-left: 0;
+}
+
+/* firstview */
+.mainvisual-textbox .catchcopy {
+    font-size: 36px;
+}
+
+.firstview-introduction {
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+/* .firstview-buttons {
+    display: flex;
+    flex-wrap: wrap;
+} */
+
+/* .firstview-button a {
+    max-width: none;
+    width: 80%;  /* 初期は100%幅 */
+    /* display: block;
+    background: #B04A47;
+    border-radius: 100px;
+    padding: 20px 0;
+    margin: 0 auto 40px auto;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.5s; */
+/* } */ 
+
+.firstview-button a {
+    max-width: 80%;        /* 初期状態では画面幅に合わせる */
+    display: block;
+    background: #B04A47;
+    border-radius: 100px;
+    padding: 20px 0;
+    margin: 0 auto 40px auto;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+.firstview-button a:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+@media screen and (min-width: 601px) {
+    .flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .section-title,
+    .section-title span {
+        font-size: 48px;
+    }
+
+    .mainvisual img {
+        height: 90vh;
+    }
+
+    .main-catchcopy {
+        font-size: 60px;
+    }
+
+    .sub-catchcopy {
+        font-size: 40px;
+    }
+
+    .introduction-contents {
+        flex-direction: row-reverse;
+    }
+
+    .introduction-textbox {
+        margin-bottom: 0;
+    }
+
+    .introduction-textbox,
+    .introduction-contents img {
+        width: 48%;
+    }
+
+    .supprt-content {
+        width: 32%;
+        margin-bottom: 0;
+    }
+
+    .supprt-catchcopy {
+        font-size: 32px;
+    }
+
+    .supprt-content-title {
+        font-size: 20px;
+    }
+
+    .supprt-content-text {
+        font-size: 16px;
+    }
+
+    .recruitment-content {
+        display: flex;
+        justify-content: center;
+    }
+
+    .voice-contents:nth-of-type(1) {
+        flex-direction: row-reverse;
+    }
+
+    .voice-contents img,
+    .voice-contents-textbox {
+        width: 48%;
+    }
+
+    .apply p {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .apply a {
+        font-size: 60px;
+        border-radius: 100px;
+    }
+
+    .store-contents {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .store-content {
+        width: 600px;
+    }
+
+    .work .work-catchcopy {
+        font-size: 32px;
+    }
+
+    .work-contents-itembox {
+        width: 32%;
+        margin-bottom: 0;
+    }
+
+    .work .work-textbox-title {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .work p {
+        font-size: 16px;
+    }
+
+    .mainvisual-textbox .catchcopy {
+        font-size: 48px;
+    }
+    
+    .firstview-introduction {
+        text-align: left;
+        margin-bottom: 40px;
+    }
+
+    .firstview-buttons {
+        display: flex;
+        flex-wrap: wrap;    /* 必要に応じて折り返す */
+        justify-content: center;
+        align-items: stretch;
+        row-gap: 40px;
+        column-gap: 10%;
+    }
+
+    .firstview-button a {
+        width: 400px;   /* 横並び時に固定幅を適用 */
+        max-width: none; /* モバイルで設定されたmax-widthを解除 */
+        flex: 0 0 auto;  /* 固定幅の適用 */
+        margin: 0;       
+    }
+}
